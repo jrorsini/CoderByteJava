@@ -1,8 +1,8 @@
 public class Hello {
   public static void main(String[] args) {
 
-    int myFirstNumber = 4;
+    String myFirstNumber = "Jean-Roger";
 
-    System.out.println("Hello World!" + myFirstNumber);
+    System.out.println("Hello " + myFirstNumber + "!");
   }
 }
