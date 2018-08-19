@@ -2,5 +2,9 @@
   "devDependencies": {
     "prettier": "1.14.2",
     "prettier-plugin-java": "0.0.10"
+  },
+  "scripts": {
+    "build": "javac Hello.java",
+    "dev": "java Hello"
   }
 }
