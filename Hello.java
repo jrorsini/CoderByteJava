@@ -1,8 +1,7 @@
 public class Hello {
   public static void main(String[] args) {
-    byte age;
-    age = 25;
+    double age = Math.floor(25.5);
     String name = "Jean-Roger";
-    System.out.println("Hello World " + name + " you are " + age);
+    System.out.println("Hello World " + name + " you are " + age + " years old");
   }
 }
