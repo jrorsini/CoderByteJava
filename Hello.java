@@ -12,11 +12,12 @@ public class Hello {
   // return(num===0||num===1)?num:num*FirstFactorial(num-1)
 
   static Int firstFactorial(int num) {
-
+    return num > 0 ? 0 : 1;
   }
 
   public static void main(String[] args) {
     String name = "Jean-Roger";
     System.out.println("Hello " + name + ", " + isLegal(19));
+    System.out.println(firstFactorial(2));
   }
 }
