@@ -9,20 +9,6 @@ public class Hello {
     }
   }
 
-  // return(num===0||num===1)?num:num*FirstFactorial(num-1)
-
-  /**
-   * function LetterCapitalize(str) { var arr = str.split(" "); for(var i = 0; i <
-   * arr.length; i++) { arr[i] = arr[i].substr(0,1).toUpperCase() +
-   * arr[i].substr(1, arr[i].length); } // code goes here return arr.join(" "); }
-   */
-
-  /**
-   * if (num1 - num2 < 0) { return "true"; } else if(num1 == num2) { return "-1";
-   * } else { return "false"; }
-   * 
-   */
-
   static String CheckNums(int num1, int num2) {
     return num1 == num2 ? "-1" : String.valueOf(num2 > num1);
   }
