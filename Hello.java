@@ -11,6 +11,20 @@ public class Hello {
 
   // return(num===0||num===1)?num:num*FirstFactorial(num-1)
 
+  /**
+   * function LetterCapitalize(str) { var arr = str.split(" "); for(var i = 0; i <
+   * arr.length; i++) { arr[i] = arr[i].substr(0,1).toUpperCase() +
+   * arr[i].substr(1, arr[i].length); } // code goes here return arr.join(" "); }
+   */
+
+  static void letterCapitalize(String str) {
+    String array[] = str.split(" ");
+    for (int i = 0; i < array.length; i++) {
+      array[i].split("")[0] = "H";
+      System.out.println(array[i]);
+    }
+  }
+
   static int SimpleAdding(int num) {
     int res = 0;
     for (int i = 1; i <= num; i++) {
@@ -24,8 +38,7 @@ public class Hello {
   }
 
   public static void main(String[] args) {
-    String name = "Jean-Roger";
-    System.out.println("Hello " + name + ", " + isLegal(19));
-    System.out.println(SimpleAdding(12));
+    letterCapitalize("hello world");
+    letterCapitalize("i ran there");
   }
 }
