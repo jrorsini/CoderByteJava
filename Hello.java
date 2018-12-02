@@ -17,6 +17,21 @@ public class Hello {
    * arr[i].substr(1, arr[i].length); } // code goes here return arr.join(" "); }
    */
 
+  /**
+   * if (num1 - num2 < 0) { return "true"; } else if(num1 == num2) { return "-1";
+   * } else { return "false"; }
+   * 
+   */
+
+  static String CheckNums(int num1, int num2) {
+    if (num2 > num1) {
+      return "true";
+    } else if (num2 == num1) {
+      return "false";
+    }
+    return "-1";
+  }
+
   static String letterCapitalize(String str) {
     String arr[] = str.split(" ");
     for (int i = 0; i < arr.length; i++) {
@@ -38,7 +53,8 @@ public class Hello {
   }
 
   public static void main(String[] args) {
-    System.out.println(letterCapitalize("hello world"));
-    System.out.println(letterCapitalize("i ran there"));
+    // System.out.println(letterCapitalize("hello world"));
+    // System.out.println(letterCapitalize("i ran there"));
+    System.out.println(CheckNums(67, 67));
   }
 }
