@@ -17,12 +17,12 @@ public class Hello {
    * arr[i].substr(1, arr[i].length); } // code goes here return arr.join(" "); }
    */
 
-  static void letterCapitalize(String str) {
-    String array[] = str.split(" ");
-    for (int i = 0; i < array.length; i++) {
-      array[i].split("")[0] = "H";
-      System.out.println(array[i]);
+  static String letterCapitalize(String str) {
+    String arr[] = str.split(" ");
+    for (int i = 0; i < arr.length; i++) {
+      arr[i] = arr[i].split("")[0].toUpperCase() + arr[i].substring(1);
     }
+    return String.join(" ", arr);
   }
 
   static int SimpleAdding(int num) {
@@ -38,7 +38,7 @@ public class Hello {
   }
 
   public static void main(String[] args) {
-    letterCapitalize("hello world");
-    letterCapitalize("i ran there");
+    System.out.println(letterCapitalize("hello world"));
+    System.out.println(letterCapitalize("i ran there"));
   }
 }
