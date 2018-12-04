@@ -45,7 +45,11 @@ public class Hello {
     return new String(arrOfStr);
   }
 
+  static String LongestWord(String sen) {
+    return sen;
+  }
+
   public static void main(String[] args) {
-    System.out.println(AlphabetSoup("coderbyte"));
+    System.out.println(LongestWord("fun&!! time"));
   }
 }
