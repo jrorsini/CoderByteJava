@@ -34,7 +34,7 @@ public class Hello {
   }
 
   static String TimeConvert(int num) {
-    return String.valueOf(num / 60) + ":" + String.valueOf(num % 60);
+    return num / 60 + ":" + num % 60;
   }
 
   public static void main(String[] args) {
