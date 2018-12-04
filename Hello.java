@@ -33,6 +33,10 @@ public class Hello {
     return num == 1 ? num : num * firstFactorial(num - 1);
   }
 
+  static String TimeConvert(int num) {
+    return ":"
+  }
+
   public static void main(String[] args) {
     // System.out.println(letterCapitalize("hello world"));
     // System.out.println(letterCapitalize("i ran there"));
