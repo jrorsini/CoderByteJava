@@ -45,8 +45,20 @@ public class Hello {
     return new String(arrOfStr);
   }
 
+  public int compare(String o1, String o2) {
+    if (o1.length() > o2.length()) {
+      return 1;
+    } else if (o1.length() < o2.length()) {
+      return -1;
+    } else {
+      return 0;
+    }
+  }
+
   static String LongestWord(String sen) {
-    return sen;
+    String[] arr = sen.replaceAll("[^a-zA-Z\\s]", "").split(" ");
+    Arrays.sort(arr);
+    return arr[0];
   }
 
   public static void main(String[] args) {
