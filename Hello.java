@@ -1,6 +1,19 @@
 import java.util.Arrays;
+import java.util.Comparator;
 
-public class Hello {
+class SortByLength implements Comparator<String> {
+  public int compare(String o1, String o2) {
+    if (o1.length() > o2.length()) {
+      return -1;
+    } else if (o1.length() < o2.length()) {
+      return 1;
+    } else {
+      return 0;
+    }
+  }
+}
+
+public class Hello implements Comparator<String> {
   int x = 5;
 
   static String isLegal(int age) {
@@ -57,7 +70,7 @@ public class Hello {
 
   static String LongestWord(String sen) {
     String[] arr = sen.replaceAll("[^a-zA-Z\\s]", "").split(" ");
-    Arrays.sort(arr);
+    Arrays.sort(arr, new SortByLength());
     return arr[0];
   }
 
