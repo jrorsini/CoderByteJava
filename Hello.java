@@ -41,10 +41,11 @@ public class Hello {
 
   static String AlphabetSoup(String str) {
     char[] arrOfStr = str.toCharArray();
-    System.out.println(arrOfStr);
     Arrays.sort(arrOfStr);
-    // return String.join("", arrOfStr);
-    return new String(arrOfStr);
+    for (int i = 0; i < arrOfStr.length; i++) {
+      System.out.println(arrOfStr[i]);
+    }
+    return "test";
   }
 
   public static void main(String[] args) {
