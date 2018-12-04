@@ -42,18 +42,10 @@ public class Hello {
   static String AlphabetSoup(String str) {
     char[] arrOfStr = str.toCharArray();
     Arrays.sort(arrOfStr);
-    for (int i = 0; i < arrOfStr.length; i++) {
-      System.out.println(arrOfStr[i]);
-    }
-    return "test";
+    return new String(arrOfStr);
   }
 
   public static void main(String[] args) {
-    // System.out.println(letterCapitalize("hello world"));
-    // System.out.println(letterCapitalize("i ran there"));
-    // System.out.println(CheckNums(67, 67));
-    // System.out.println(TimeConvert(126));
-    // System.out.println(TimeConvert(45));
     System.out.println(AlphabetSoup("coderbyte"));
   }
 }
