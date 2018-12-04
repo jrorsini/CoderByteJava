@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Hello {
   int x = 5;
 
@@ -37,11 +39,20 @@ public class Hello {
     return num / 60 + ":" + num % 60;
   }
 
+  static String AlphabetSoup(String str) {
+    char[] arrOfStr = str.toCharArray();
+    System.out.println(arrOfStr);
+    Arrays.sort(arrOfStr);
+    // return String.join("", arrOfStr);
+    return new String(arrOfStr);
+  }
+
   public static void main(String[] args) {
     // System.out.println(letterCapitalize("hello world"));
     // System.out.println(letterCapitalize("i ran there"));
     // System.out.println(CheckNums(67, 67));
-    System.out.println(TimeConvert(126));
-    System.out.println(TimeConvert(45));
+    // System.out.println(TimeConvert(126));
+    // System.out.println(TimeConvert(45));
+    System.out.println(AlphabetSoup("coderbyte"));
   }
 }
