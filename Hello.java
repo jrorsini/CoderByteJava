@@ -34,12 +34,14 @@ public class Hello {
   }
 
   static String TimeConvert(int num) {
-    return ":"
+    return String.valueOf(num / 60) + ":" + String.valueOf(num % 60);
   }
 
   public static void main(String[] args) {
     // System.out.println(letterCapitalize("hello world"));
     // System.out.println(letterCapitalize("i ran there"));
-    System.out.println(CheckNums(67, 67));
+    // System.out.println(CheckNums(67, 67));
+    System.out.println(TimeConvert(126));
+    System.out.println(TimeConvert(45));
   }
 }
