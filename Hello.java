@@ -77,8 +77,12 @@ public class Hello implements Comparator<String> {
   static String SimpleSymbols(String str) {
     String arr[] = str.split("");
     for (int i = 0; i < arr.length; i++) {
-      if (arr[i].matches("[a-zA-Z]") && arr[i - 1] != "+" || arr[i + 1] != "+") {
-        return "false";
+      if (arr[i].matches("[a-z]")) {
+        if (i == 0 || i == arr.length - 1)
+          return "false";
+        if (arr[i - 1] != "+" && arr[i + 1] != "+") {
+          return "false";
+        }
       }
     }
     return "true";
@@ -86,5 +90,6 @@ public class Hello implements Comparator<String> {
 
   public static void main(String[] args) {
     System.out.println(SimpleSymbols("+d+=3=+s+"));
+    // System.out.println(SimpleSymbols("aaaa"));
   }
 }
