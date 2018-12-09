@@ -77,7 +77,9 @@ public class Hello implements Comparator<String> {
   static String SimpleSymbols(String str) {
     String arr[] = str.split("");
     for (int i = 0; i < arr.length; i++) {
-      System.out.println(arr[i]);
+      if (arr[i].matches("[a-zA-Z]") && arr[i - 1] != "+" || arr[i + 1] != "+") {
+        return "false";
+      }
     }
     return "true";
   }
