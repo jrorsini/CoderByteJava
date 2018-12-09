@@ -74,7 +74,15 @@ public class Hello implements Comparator<String> {
     return arr[0];
   }
 
+  static String SimpleSymbols(String str) {
+    String arr[] = str.split("");
+    for (int i = 0; i < arr.length; i++) {
+      System.out.println(arr[i]);
+    }
+    return "true";
+  }
+
   public static void main(String[] args) {
-    System.out.println(LongestWord("fun&!! time"));
+    System.out.println(SimpleSymbols("+d+=3=+s+"));
   }
 }
