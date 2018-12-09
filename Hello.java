@@ -1,18 +1,6 @@
 import java.util.Arrays;
 import java.util.Comparator;
 
-class SortByLength implements Comparator<String> {
-  public int compare(String o1, String o2) {
-    if (o1.length() > o2.length()) {
-      return -1;
-    } else if (o1.length() < o2.length()) {
-      return 1;
-    } else {
-      return 0;
-    }
-  }
-}
-
 public class Hello implements Comparator<String> {
   int x = 5;
 
@@ -70,8 +58,15 @@ public class Hello implements Comparator<String> {
 
   static String LongestWord(String sen) {
     String[] arr = sen.replaceAll("[^a-zA-Z\\s]", "").split(" ");
-    Arrays.sort(arr, new SortByLength());
-    return arr[0];
+    String longest = null;
+    int l = 0;
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i].length() > l) {
+        l = arr[i].length();
+        longest = arr[i];
+      }
+    }
+    return longest;
   }
 
   static String SimpleSymbols(String str) {
@@ -90,6 +85,7 @@ public class Hello implements Comparator<String> {
 
   public static void main(String[] args) {
     System.out.println(SimpleSymbols("+d+=3=+s+"));
+    System.out.println(LongestWord("I love dogs"));
     // System.out.println(SimpleSymbols("aaaa"));
   }
 }
