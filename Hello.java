@@ -83,9 +83,17 @@ public class Hello implements Comparator<String> {
     return "true";
   }
 
+  static int VowelCount(String str) {
+    int count = 0;
+    String[] arr = str.split("");
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i].matches("[aeiou]"))
+        count += 1;
+    }
+    return count;
+  }
+
   public static void main(String[] args) {
-    System.out.println(SimpleSymbols("+d+=3=+s+"));
-    System.out.println(LongestWord("I love dogs"));
-    // System.out.println(SimpleSymbols("aaaa"));
+    System.out.println(VowelCount("coderbyte"));
   }
 }
