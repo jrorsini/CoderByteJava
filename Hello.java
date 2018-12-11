@@ -108,6 +108,15 @@ public class Hello implements Comparator<String> {
     return String.valueOf(xCount == arr.length / 2);
   }
 
+  static String Palindrome(String str) {
+    String[] arr = str.split("");
+    String palindrome = "";
+    for (int i = arr.length - 1; i >= 0; i--) {
+      palindrome += arr[i];
+    }
+    return "false";
+  }
+
   public static void main(String[] args) {
     System.out.println(ExOh("xoxo"));
   }
