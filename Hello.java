@@ -93,7 +93,22 @@ public class Hello implements Comparator<String> {
     return count;
   }
 
+  static int wordCount(String str) {
+    return str.split(" ").length;
+  }
+
+  static String ExOh(String str) {
+    int xCount = 0;
+    String[] arr = str.split("");
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i] == "x") {
+        xCount += 1;
+      }
+    }
+    return String.valueOf(xCount == arr.length / 2);
+  }
+
   public static void main(String[] args) {
-    System.out.println(VowelCount("coderbyte"));
+    System.out.println(ExOh("xoxo"));
   }
 }
