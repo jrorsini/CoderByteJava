@@ -114,10 +114,10 @@ public class Hello implements Comparator<String> {
     for (int i = arr.length - 1; i >= 0; i--) {
       palindrome += arr[i];
     }
-    return "false";
+    return String.valueOf(str == palindrome);
   }
 
   public static void main(String[] args) {
-    System.out.println(ExOh("xoxo"));
+    System.out.println(Palindrome("eye"));
   }
 }
