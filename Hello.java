@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Collections;
+import java.lang.Math;
 
 public class Hello implements Comparator<String> {
   int x = 5;
@@ -128,7 +129,11 @@ public class Hello implements Comparator<String> {
     return sum == arr[arr.length - 1] ? "true" : "false";
   }
 
+  public static int PowerSetCount(int[] arr) {
+    return (int) Math.pow(2, arr.length);
+  }
+
   public static void main(String[] args) {
-    System.out.println(ArrayAdditionI(new int[] { 1, 2, 3 }));
+    System.out.println(PowerSetCount(new int[] { 1, 2, 3, 4 }));
   }
 }
