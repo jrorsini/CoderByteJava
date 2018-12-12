@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Collections;
 
 public class Hello implements Comparator<String> {
   int x = 5;
@@ -119,14 +120,15 @@ public class Hello implements Comparator<String> {
     // try with new String builder.
   }
 
-  static int ArrayAdditionI(int[] arr) {
-
+  static String ArrayAdditionI(int[] arr) {
+    int sum = 0;
     Arrays.sort(arr);
-    System.out.printf("Modified arr[] : %s", Arrays.toString(arr));
-    return 0;
+    for (int i = 0; i < arr.length - 1; i++)
+      sum += arr[i];
+    return sum == arr[arr.length - 1] ? "true" : "false";
   }
 
   public static void main(String[] args) {
-    System.out.println(ArrayAdditionI(new int[] { 1, 2, 3, 100 }));
+    System.out.println(ArrayAdditionI(new int[] { 1, 2, 3 }));
   }
 }
