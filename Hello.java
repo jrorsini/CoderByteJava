@@ -115,9 +115,18 @@ public class Hello implements Comparator<String> {
       palindrome += arr[i];
     }
     return String.valueOf(str == palindrome);
+
+    // try with new String builder.
+  }
+
+  static int ArrayAdditionI(int[] arr) {
+
+    Arrays.sort(arr);
+    System.out.printf("Modified arr[] : %s", Arrays.toString(arr));
+    return 0;
   }
 
   public static void main(String[] args) {
-    System.out.println(Palindrome("eye"));
+    System.out.println(ArrayAdditionI(new int[] { 1, 2, 3, 100 }));
   }
 }
