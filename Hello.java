@@ -4,8 +4,14 @@ import java.util.Collections;
 import java.lang.Math;
 
 public class Hello {
+  String name;
+
+  Hello() {
+    this.name = "Orsini";
+  }
 
   public static void main(String[] args) {
-    System.out.println("test");
+    Hello obj = new Hello();
+    System.out.println(obj.name);
   }
 }
