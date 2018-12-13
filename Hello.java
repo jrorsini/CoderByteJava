@@ -10,8 +10,12 @@ public class Hello {
     this.name = "Orsini";
   }
 
-  public static String SecondGreatLow() {
-    return "true";
+  public static int SecondGreatLow(int[] arr) {
+    Arrays.sort(arr);
+    for (int i = 0; i < arr.length; i++) {
+      System.out.println(arr[i]);
+    }
+    return 0;
   }
 
   public static void main(String[] args) {
