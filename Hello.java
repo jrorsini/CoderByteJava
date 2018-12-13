@@ -15,7 +15,13 @@ public class Hello {
     for (int i = 0; i < arr.length; i++) {
       System.out.println(arr[i]);
     }
-    return 0;
+    if (arr.length == 0) {
+      return String.valueOf(arr[0] + " " + arr[1]);
+    } else if (arr.length == 3) {
+      return String.valueOf(arr[1] + " " + arr[1]);
+    } else {
+      return String.valueOf(arr[1] + " " + arr[arr.length - 2]);
+    }
   }
 
   public static void main(String[] args) {
