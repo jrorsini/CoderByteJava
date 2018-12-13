@@ -20,6 +20,7 @@ public class Hello {
 
   public static void main(String[] args) {
     Hello obj = new Hello();
+    SecondGreatLow(new int[] { 5, 5, 1, 2, 3 });
     System.out.println(obj.name);
   }
 }
