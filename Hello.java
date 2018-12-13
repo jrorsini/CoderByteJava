@@ -10,6 +10,10 @@ public class Hello {
     this.name = "Orsini";
   }
 
+  public static String SecondGreatLow() {
+    return "true";
+  }
+
   public static void main(String[] args) {
     Hello obj = new Hello();
     System.out.println(obj.name);
