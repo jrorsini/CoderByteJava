@@ -18,10 +18,11 @@ public class MyConstructor {
   }
 
   public static void main(String[] args) {
-    MyConstructor test = new MyConstructor();
+    // MyConstructor test = new MyConstructor();
     MyConstructor obj1 = new MyConstructor(1, "Anne-Sophie");
     MyConstructor obj2 = new MyConstructor(2, "Jean-Roger");
+    obj1.info();
+    obj2.info();
     // new MyConstructor();
-    System.out.println(test.name);
   }
 }
