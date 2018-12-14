@@ -20,7 +20,7 @@ public class Hello {
     String divivison = String.valueOf(num1 / num2);
     String[] arr = divivison.split("");
     String res = "";
-    for (int i = arr.length - 1; i < 0; i--) {
+    for (int i = arr.length - 1; i >= 0; i--) {
       if ((i + 1) % 3 == 0) {
         res += arr[i] + ",";
       } else {
