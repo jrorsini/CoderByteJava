@@ -4,11 +4,6 @@ import java.util.Collections;
 import java.lang.Math;
 
 public class Hello {
-  String name;
-
-  Hello() {
-    this.name = "Orsini";
-  }
 
   public static String SecondGreatLow(int[] arr) {
     Arrays.sort(arr);
@@ -21,9 +16,22 @@ public class Hello {
     }
   }
 
+  public static void DivisionStringified(int num1, int num2) {
+    String divivison = String.valueOf(num1 / num2);
+    String[] arr = divivison.split("");
+    String res = "";
+    for (int i = arr.length - 1; i < 0; i--) {
+      if ((i + 1) % 3 == 0) {
+        res += arr[i] + ",";
+      } else {
+        res += arr[i];
+      }
+    }
+    System.out.println(res);
+  }
+
   public static void main(String[] args) {
-    Hello obj = new Hello();
-    System.out.println(SecondGreatLow(new int[] { 5, 5, 1, 2, 3 }));
-    System.out.println(obj.name);
+    DivisionStringified(123456789, 10000);
+    // DivisionStringified(2, 3);
   }
 }
