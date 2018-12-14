@@ -27,11 +27,18 @@ public class Hello {
         res += arr[i];
       }
     }
-    System.out.println(res);
+    System.out.println(new StringBuilder(res).reverse().toString());
+  }
+
+  public static void test(String str) {
+    System.out.println(str);
   }
 
   public static void main(String[] args) {
     DivisionStringified(123456789, 10000);
+    DivisionStringified(503394930, 43);
+    DivisionStringified(503394930, 43);
+    test("Jean-Roger Orsini");
     // DivisionStringified(2, 3);
   }
 }
