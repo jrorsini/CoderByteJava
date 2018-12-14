@@ -1,5 +1,10 @@
 public class MyConstructor {
+  MyConstructor() {
+
+  }
+
   public static void main(String[] args) {
-    System.out.println("Hello constructor.");
+    MyConstructor test = new MyConstructor();
+    System.out.println(test);
   }
 }
