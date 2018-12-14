@@ -19,6 +19,8 @@ public class MyConstructor {
 
   public static void main(String[] args) {
     MyConstructor test = new MyConstructor();
+    MyConstructor obj1 = new MyConstructor(1, "Anne-Sophie");
+    MyConstructor obj2 = new MyConstructor(2, "Jean-Roger");
     // new MyConstructor();
     System.out.println(test.name);
   }
