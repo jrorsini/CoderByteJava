@@ -51,19 +51,21 @@ public class Hello {
         if (timeFrame1.equals("am")) {
           return convert2Minutes("24:00xx") - timeInMinutes1 + timeInMinutes2;
         } else {
-          return convert2Minutes("12:00xx") - timeInMinutes1 + timeInMinutes2;
-
+          return convert2Minutes("12:00xx") - timeInMinutes1 + timeInMinutes2 + convert2Minutes("12:00xx");
         }
       }
     } else {
-
+      if (timeFrame1.equals("am")) {
+        return convert2Minutes("12:00xx") - timeInMinutes1 + timeInMinutes2;
+      } else {
+        return convert2Minutes("12:00xx") - timeInMinutes1 + timeInMinutes2;
+      }
     }
-    return 0;
   }
 
   public static void main(String[] args) {
     DivisionStringified(123456789, 10000);
     DivisionStringified(503394930, 43);
-    System.out.println(CountingMinutesI("1:23am-1:08am"));
+    System.out.println(CountingMinutesI("2:03pm-1:39pm"));
   }
 }
