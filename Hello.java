@@ -31,7 +31,8 @@ public class Hello {
   }
 
   public static int CountingMinutesI(String str) {
-
+    String time1 = str.split("-")[0];
+    String time2 = str.split("-")[1];
     return 0;
 
   }
@@ -39,5 +40,6 @@ public class Hello {
   public static void main(String[] args) {
     DivisionStringified(123456789, 10000);
     DivisionStringified(503394930, 43);
+    CountingMinutesI("9:00am-10:00am");
   }
 }
