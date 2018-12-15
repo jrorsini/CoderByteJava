@@ -47,6 +47,13 @@ public class Hello {
     if (timeFrame1.equals(timeFrame2)) {
       if (timeInMinutes1 < timeInMinutes2) {
         return timeInMinutes2 - timeInMinutes1;
+      } else {
+        if (timeFrame1.equals("am")) {
+          return convert2Minutes("24:00xx") - timeInMinutes1 + timeInMinutes2;
+        } else {
+          return convert2Minutes("12:00xx") - timeInMinutes1 + timeInMinutes2;
+
+        }
       }
     } else {
 
@@ -57,6 +64,6 @@ public class Hello {
   public static void main(String[] args) {
     DivisionStringified(123456789, 10000);
     DivisionStringified(503394930, 43);
-    System.out.println(CountingMinutesI("9:00am-10:00am"));
+    System.out.println(CountingMinutesI("1:23am-1:08am"));
   }
 }
