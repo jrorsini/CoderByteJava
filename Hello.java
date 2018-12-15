@@ -30,9 +30,22 @@ public class Hello {
     System.out.println(new StringBuilder(res).reverse().toString());
   }
 
+  public static int convert2Minutes(String str) {
+    String time = new StringBuilder(str).substring(0, str.length() - 2);
+    int hour = Integer.parseInt(time.split(":")[0]);
+    int minute = Integer.parseInt(time.split(":")[1]);
+    return hour * 60 + minute;
+  }
+
   public static int CountingMinutesI(String str) {
     String time1 = str.split("-")[0];
     String time2 = str.split("-")[1];
+    String timeFrame1 = new StringBuilder(str).substring(time1.length() - 2, time1.length());
+    String timeFrame2 = new StringBuilder(str).substring(time2.length() - 2, time2.length());
+
+    System.out.println(convert2Minutes(time1));
+    System.out.println(convert2Minutes(time2));
+    System.out.println(convert2Minutes("12:00pm"));
     return 0;
 
   }
