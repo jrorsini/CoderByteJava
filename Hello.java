@@ -30,6 +30,12 @@ public class Hello {
     System.out.println(new StringBuilder(res).reverse().toString());
   }
 
+  public static int CountingMinutesI(String str) {
+
+    return 0;
+
+  }
+
   public static void main(String[] args) {
     DivisionStringified(123456789, 10000);
     DivisionStringified(503394930, 43);
