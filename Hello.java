@@ -40,19 +40,23 @@ public class Hello {
   public static int CountingMinutesI(String str) {
     String time1 = str.split("-")[0];
     String time2 = str.split("-")[1];
-    String timeFrame1 = new StringBuilder(str).substring(time1.length() - 2, time1.length());
-    String timeFrame2 = new StringBuilder(str).substring(time2.length() - 2, time2.length());
+    String timeFrame1 = new StringBuilder(time1).substring(time1.length() - 2, time1.length());
+    String timeFrame2 = new StringBuilder(time2).substring(time2.length() - 2, time2.length());
+    int timeInMinutes1 = convert2Minutes(time1);
+    int timeInMinutes2 = convert2Minutes(time2);
+    if (timeFrame1.equals(timeFrame2)) {
+      if (timeInMinutes1 < timeInMinutes2) {
+        return timeInMinutes2 - timeInMinutes1;
+      }
+    } else {
 
-    System.out.println(convert2Minutes(time1));
-    System.out.println(convert2Minutes(time2));
-    System.out.println(convert2Minutes("12:00pm"));
+    }
     return 0;
-
   }
 
   public static void main(String[] args) {
     DivisionStringified(123456789, 10000);
     DivisionStringified(503394930, 43);
-    CountingMinutesI("9:00am-10:00am");
+    System.out.println(CountingMinutesI("9:00am-10:00am"));
   }
 }
