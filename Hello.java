@@ -63,19 +63,16 @@ public class Hello {
     }
   }
 
-  public static String DashInsert(int num) {
-    String arr[] = String.valueOf(num).split("");
+  public static String DashInsert(String num) {
+    String arr[] = num.split("");
     String res = "";
     for (int i = 0; i < arr.length; i++) {
-      if (Integer.parseInt(arr[i]) % 2 != 0 && i != arr.length - 2) {
-        if (Integer.parseInt(arr[i + 1]) % 2 != 0) {
-          res += arr[i] + '_';
-        }
+      if (i < arr.length - 1 && Integer.parseInt(arr[i]) % 2 != 0 && Integer.parseInt(arr[i + 1]) % 2 != 0) {
+        res += arr[i] + '_';
       } else {
         res += arr[i];
       }
     }
-
     return res;
   }
 
@@ -83,6 +80,6 @@ public class Hello {
     DivisionStringified(123456789, 10000);
     DivisionStringified(503394930, 43);
     System.out.println(CountingMinutesI("2:03pm-1:39pm"));
-    System.out.println(DashInsert(123499));
+    System.out.println(DashInsert("99946"));
   }
 }
