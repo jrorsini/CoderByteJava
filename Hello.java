@@ -68,7 +68,7 @@ public class Hello {
     String res = "";
     for (int i = 0; i < arr.length; i++) {
       if (i < arr.length - 1 && Integer.parseInt(arr[i]) % 2 != 0 && Integer.parseInt(arr[i + 1]) % 2 != 0) {
-        res += arr[i] + '_';
+        res += arr[i] + '-';
       } else {
         res += arr[i];
       }
@@ -80,6 +80,5 @@ public class Hello {
     DivisionStringified(123456789, 10000);
     DivisionStringified(503394930, 43);
     System.out.println(CountingMinutesI("2:03pm-1:39pm"));
-    System.out.println(DashInsert("99946"));
   }
 }
