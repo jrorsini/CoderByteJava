@@ -63,6 +63,17 @@ public class Hello {
     }
   }
 
+  public static String DashInsert(int num) {
+    String arr[] = String.valueOf(num).split("");
+    String res = "";
+    for (arr i = 0; i < arr.length; i++) {
+      if (Integer.parseInt(arr[i]) % 2 != 0) {
+      }
+    }
+
+    return "";
+  }
+
   public static void main(String[] args) {
     DivisionStringified(123456789, 10000);
     DivisionStringified(503394930, 43);
