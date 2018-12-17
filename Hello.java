@@ -99,11 +99,16 @@ public class Hello {
   }
 
   public static String NumberAddition(String str) {
-    String[] arr = str.split("[a-z]");
+    String[] arr = str.split("[a-zA-Z]");
+    int res = 0;
     for (int i = 0; i < arr.length; i++) {
-      System.out.println(arr[i]);
+      if (arr[i].matches("")) {
+      } else {
+        System.out.println(arr[i]);
+        res += Integer.parseInt(arr[i]);
+      }
     }
-    return str;
+    return String.valueOf(res);
   }
 
   public static void main(String[] args) {
