@@ -76,9 +76,19 @@ public class Hello {
     return res;
   }
 
+  public static String SwapCase(String str) {
+    String sb = "";
+    for (int i = 0; i < str.length(); i++) {
+      if (str.charAt(i) == str.toLowerCase().charAt(i)) {
+        sb += str.toUpperCase().charAt(i);
+      } else {
+        sb += str.toLowerCase().charAt(i);
+      }
+    }
+    return sb;
+  }
+
   public static void main(String[] args) {
-    DivisionStringified(123456789, 10000);
-    DivisionStringified(503394930, 43);
-    System.out.println(CountingMinutesI("2:03pm-1:39pm"));
+    System.out.println(SwapCase("Hello-LOL"));
   }
 }
