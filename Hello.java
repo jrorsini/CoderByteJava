@@ -99,12 +99,10 @@ public class Hello {
   }
 
   public static String NumberAddition(String str) {
-    String[] arr = str.split("[a-zA-Z]");
+    String[] arr = str.split("[a-zA-Z\\s]");
     int res = 0;
     for (int i = 0; i < arr.length; i++) {
-      if (arr[i].matches("")) {
-      } else {
-        System.out.println(arr[i]);
+      if (arr[i].matches("") == false) {
         res += Integer.parseInt(arr[i]);
       }
     }
@@ -112,6 +110,6 @@ public class Hello {
   }
 
   public static void main(String[] args) {
-    System.out.println(NumberAddition("75Number9"));
+    System.out.println(NumberAddition("3Hello 9"));
   }
 }
