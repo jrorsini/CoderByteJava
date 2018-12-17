@@ -88,7 +88,17 @@ public class Hello {
     return sb;
   }
 
+  public static String HDistance(String[] strArr) {
+    int distance = 0;
+    for (int i = 0; i < strArr[0].length(); i++) {
+      if (strArr[0].charAt(i) != strArr[1].charAt(i)) {
+        distance += 1;
+      }
+    }
+    return String.valueOf(distance);
+  }
+
   public static void main(String[] args) {
-    System.out.println(SwapCase("Hello-LOL"));
+    System.out.println(HDistance(new String[] { "10011", "10100" }));
   }
 }
