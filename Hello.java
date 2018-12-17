@@ -98,7 +98,15 @@ public class Hello {
     return String.valueOf(distance);
   }
 
+  public static String NumberAddition(String str) {
+    String[] arr = str.split("[a-z]");
+    for (int i = 0; i < arr.length; i++) {
+      System.out.println(arr[i]);
+    }
+    return str;
+  }
+
   public static void main(String[] args) {
-    System.out.println(HDistance(new String[] { "10011", "10100" }));
+    System.out.println(NumberAddition("75Number9"));
   }
 }
