@@ -109,7 +109,18 @@ public class Hello {
     return String.valueOf(res);
   }
 
+  public static String GroupTotals(String[] strArr) {
+    String[] slots;
+    slots = new String[10];
+
+    for (int i = 0; i < strArr.length; i++) {
+      System.out.println(new StringBuilder(strArr[i]).substring(0, 1));
+    }
+    System.out.println(slots[0]);
+    return strArr[0];
+  }
+
   public static void main(String[] args) {
-    System.out.println(NumberAddition("3Hello 9"));
+    System.out.println(GroupTotals(new String[] { "X:-1", "Y:1", "X:-4", "B:3", "X:5" }));
   }
 }
