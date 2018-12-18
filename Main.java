@@ -32,6 +32,6 @@ public class Main {
     for (int i = 0; i < array.length; i++) {
       sum += array[i];
     }
-    return (double) sum / array.length;
+    return (double) sum / (double) array.length;
   }
 }
