@@ -128,18 +128,22 @@ public class Hello {
       if (str.length() > l) {
         l = str.length();
       }
-      System.out.println(str);
     }
     for (String w : strArr) {
-
+      if (w.length() < l) {
+        l = w.length();
+        c += 1;
+        if (c == 2) {
+          return w;
+        }
+      }
     }
-    System.out.println(l);
     return strArr[0];
   }
 
   public static void main(String[] args) {
     // System.out.println(GroupTotals(new String[] { "X:-1", "Y:1", "X:-4", "B:3",
     // "X:5" }));
-    System.out.println(ThirdGreatest(new String[] { "coder", "byte", "code" }));
+    System.out.println(ThirdGreatest(new String[] { "abc", "defg", "z", "hijk" }));
   }
 }
