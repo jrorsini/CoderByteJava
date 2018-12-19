@@ -141,9 +141,20 @@ public class Hello {
     return strArr[0];
   }
 
+  public static String Palindrome(String str) {
+
+    String[] arr = str.split("");
+    String palindrome = "";
+    for (int i = arr.length - 1; i >= 0; i--) {
+      palindrome += arr[i];
+    }
+    return String.valueOf(str == palindrome);
+
+  }
+
   public static void main(String[] args) {
     // System.out.println(GroupTotals(new String[] { "X:-1", "Y:1", "X:-4", "B:3",
     // "X:5" }));
-    System.out.println(ThirdGreatest(new String[] { "abc", "defg", "z", "hijk" }));
+    System.out.println(Palindrome("never odd or even"));
   }
 }
