@@ -142,19 +142,33 @@ public class Hello {
   }
 
   public static String Palindrome(String str) {
+    str = str.toLowerCase().replaceAll("[^a-z]", "");
+    return String
+        .valueOf(str.toLowerCase().replaceAll("[^a-z]", "").equals(new StringBuilder(str).reverse().toString()));
+  }
 
-    String[] arr = str.split("");
-    String palindrome = "";
-    for (int i = arr.length - 1; i >= 0; i--) {
-      palindrome += arr[i];
+  public static String ExOh(String str) {
+    if (str.length() % 2 == 1) {
+      return "false";
+    } else {
+      int xCount = 0;
+      String[] arr = str.split("");
+      for (int i = 0; i < arr.length; i++) {
+        if (arr[i] == "x") {
+          xCount += 1;
+        }
+      }
+      return String.valueOf(xCount == arr.length / 2);
     }
-    return String.valueOf(str == palindrome);
-
   }
 
   public static void main(String[] args) {
     // System.out.println(GroupTotals(new String[] { "X:-1", "Y:1", "X:-4", "B:3",
     // "X:5" }));
-    System.out.println(Palindrome("never odd or even"));
+    System.out.println(ExOh("xoxo"));
+    System.out.println(ExOh("xo"));
+    System.out.println(ExOh("oooxxxoxox"));
+    System.out.println(ExOh("oxox"));
+    System.out.println(ExOh("xooxox"));
   }
 }
