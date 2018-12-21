@@ -167,9 +167,18 @@ public class Hello {
     return logBase2 == Math.round(logBase2);
   }
 
+  public static int AdditivePersistence(int num) {
+    int l = String.valueOf(num).length();
+
+    System.out.println(l);
+    if (l == 1) {
+      return 0;
+    } else {
+      return 1;
+    }
+  }
+
   public static void main(String[] args) {
-    System.out.println(PowersofTwo(4));
-    System.out.println(PowersofTwo(124));
-    System.out.println(PowersofTwo(6));
+    System.out.println(AdditivePersistence(6));
   }
 }
