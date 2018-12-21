@@ -161,13 +161,14 @@ public class Hello {
     }
   }
 
+  public static int PowersofTwo(int num) {
+    System.out.println(num % 2);
+
+    return num;
+
+  }
+
   public static void main(String[] args) {
-    // System.out.println(GroupTotals(new String[] { "X:-1", "Y:1", "X:-4", "B:3",
-    // "X:5" }));
-    System.out.println(ExOh("xoxo"));
-    System.out.println(ExOh("xo"));
-    System.out.println(ExOh("oooxxxoxox"));
-    System.out.println(ExOh("oxox"));
-    System.out.println(ExOh("xooxox"));
+    System.out.println(PowersofTwo(4));
   }
 }
