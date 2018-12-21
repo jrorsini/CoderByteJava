@@ -2,6 +2,7 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Collections;
 import java.lang.Math;
+import java.text.DecimalFormat;
 
 public class Hello {
 
@@ -161,14 +162,14 @@ public class Hello {
     }
   }
 
-  public static int PowersofTwo(int num) {
-    System.out.println(num % 2);
-
-    return num;
-
+  public static boolean PowersofTwo(int num) {
+    double logBase2 = (Math.log(num) / Math.log(2));
+    return logBase2 == Math.round(logBase2);
   }
 
   public static void main(String[] args) {
     System.out.println(PowersofTwo(4));
+    System.out.println(PowersofTwo(124));
+    System.out.println(PowersofTwo(6));
   }
 }
