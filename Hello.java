@@ -187,14 +187,31 @@ public class Hello {
     }
   }
 
-  public static void MultiplicativePersistence(int num1, int num2) {
-    
+  public static int MultiplicativePersistence(int num) {
+    int l = String.valueOf(num).length();
+    int res = 0;
+    if (l == 1) {
+      return 0;
+    } else {
+      while (l > 1) {
+        int sum = 1;
+        String[] arr = String.valueOf(num).split("");
+        for (String d : arr) {
+          sum += Integer.parseInt(d);
+        }
+        num = sum;
+        res += 1;
+        l = String.valueOf(sum).length();
+      }
+      return res;
+    }
   }
 
   public static void main(String[] args) {
-    System.out.println(AdditivePersistence(6));
-    System.out.println(AdditivePersistence(19));
-    System.out.println(AdditivePersistence(2718));
+    System.out.println(MultiplicativePersistence(19));
+    System.out.println(MultiplicativePersistence(25));
+    System.out.println(MultiplicativePersistence(39));
+    System.out.println(MultiplicativePersistence(2718));
 
   }
 }
