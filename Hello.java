@@ -169,16 +169,28 @@ public class Hello {
 
   public static int AdditivePersistence(int num) {
     int l = String.valueOf(num).length();
-
-    System.out.println(l);
+    int res = 0;
     if (l == 1) {
       return 0;
     } else {
-      return 1;
+      while (l > 1) {
+        int sum = 0;
+        String[] arr = String.valueOf(num).split("");
+        for (String d : arr) {
+          sum += Integer.parseInt(d);
+        }
+        num = sum;
+        res += 1;
+        l = String.valueOf(sum).length();
+      }
+      return res;
     }
   }
 
   public static void main(String[] args) {
     System.out.println(AdditivePersistence(6));
+    System.out.println(AdditivePersistence(19));
+    System.out.println(AdditivePersistence(2718));
+
   }
 }
