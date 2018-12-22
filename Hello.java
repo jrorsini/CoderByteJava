@@ -197,7 +197,7 @@ public class Hello {
         int sum = 1;
         String[] arr = String.valueOf(num).split("");
         for (String d : arr) {
-          sum += Integer.parseInt(d);
+          sum *= Integer.parseInt(d);
         }
         num = sum;
         res += 1;
@@ -211,7 +211,6 @@ public class Hello {
     System.out.println(MultiplicativePersistence(19));
     System.out.println(MultiplicativePersistence(25));
     System.out.println(MultiplicativePersistence(39));
-    System.out.println(MultiplicativePersistence(2718));
 
   }
 }
