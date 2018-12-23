@@ -1,6 +1,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.Collections;
 import java.lang.Math;
 import java.text.DecimalFormat;
@@ -247,6 +248,8 @@ public class Hello {
       String[] split = keyValue.split(":");
       String key = split[0];
       Integer value = Integer.parseInt(split[1]);
+      Integer sum = (counts.get(key) == null ? value : counts.get(key) + value);
+      counts.put(key, sum);
 
       System.out.println(counts.get(key));
 
@@ -255,8 +258,10 @@ public class Hello {
   }
 
   public static void main(String[] args) {
-    System.out.println(GroupTotals(new String[] { "Z:0", "A:-1" }));
-    System.out.println(GroupTotals(new String[] { "B:-1", "A:1", "B:3", "A:5" }));
-    System.out.println(GroupTotals(new String[] { "X:-1", "Y:1", "X:-4", "B:3", "X:5" }));
+    GroupTotals(new String[] { "Z:0", "A:-1" });
+    // System.out.println(GroupTotals(new String[] { "B:-1", "A:1", "B:3", "A:5"
+    // }));
+    // System.out.println(GroupTotals(new String[] { "X:-1", "Y:1", "X:-4", "B:3",
+    // "X:5" }));
   }
 }
