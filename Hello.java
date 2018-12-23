@@ -252,7 +252,7 @@ public class Hello {
       counts.put(key, sum);
     }
     System.out.println(counts);
-    return strArr[0];
+    return res;
   }
 
   public static void main(String[] args) {
