@@ -9,8 +9,8 @@ public class VariableScopes {
     int x = 13;
     if (x > 50) {
       int y = 25;
+      System.out.println(y);
       if (y < 10) {
-
       }
     } else {
 
