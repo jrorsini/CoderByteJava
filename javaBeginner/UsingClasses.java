@@ -4,11 +4,10 @@
 public class UsingClasses {
   // Class is the blueprint of the dog.
   public static void main(String[] args) {
-    Dog myDog = new Dog();
+    Dog myDog = new Dog(4);
     myDog.bark();
-    myDog.checkAge();
-    myDog.age = 8;
-    myDog.checkAge();
+    Dog bailey = new Dog(6);
+    myDog.getCount();
 
   }
 }
