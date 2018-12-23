@@ -196,12 +196,16 @@ public class Hello {
   }
 
   public static String GroupTotals(String[] strArr) {
-    String[] slots;
+    String[] arr;
     slots = new String[10];
+    count = 0;
 
     for (int i = 0; i < strArr.length; i++) {
-      System.out.println(new StringBuilder(strArr[i]).substring(0, 1));
-
+      slots[count] = new StringBuilder(strArr[i]).substring(0, 1);
+      for (int x = 0; x < slots.length; x++) {
+        System.out.println(new StringBuilder(slots[x]).substring(0, 1));
+      }
+      count++;
     }
     System.out.println(slots[0]);
     return strArr[0];
