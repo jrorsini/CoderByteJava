@@ -110,18 +110,6 @@ public class Hello {
     return String.valueOf(res);
   }
 
-  public static String GroupTotals(String[] strArr) {
-    String[] slots;
-    slots = new String[10];
-
-    for (int i = 0; i < strArr.length; i++) {
-      System.out.println(new StringBuilder(strArr[i]).substring(0, 1));
-
-    }
-    System.out.println(slots[0]);
-    return strArr[0];
-  }
-
   public static String ThirdGreatest(String[] strArr) {
     int l = 0;
     int c = 0;
@@ -207,10 +195,21 @@ public class Hello {
     }
   }
 
-  public static void main(String[] args) {
-    System.out.println(MultiplicativePersistence(19));
-    System.out.println(MultiplicativePersistence(25));
-    System.out.println(MultiplicativePersistence(39));
+  public static String GroupTotals(String[] strArr) {
+    String[] slots;
+    slots = new String[10];
 
+    for (int i = 0; i < strArr.length; i++) {
+      System.out.println(new StringBuilder(strArr[i]).substring(0, 1));
+
+    }
+    System.out.println(slots[0]);
+    return strArr[0];
+  }
+
+  public static void main(String[] args) {
+    System.out.println(GroupTotals(new String[] { "Z:0", "A:-1" }));
+    System.out.println(GroupTotals(new String[] { "B:-1", "A:1", "B:3", "A:5" }));
+    System.out.println(GroupTotals(new String[] { "X:-1", "Y:1", "X:-4", "B:3", "X:5" }));
   }
 }
