@@ -196,19 +196,47 @@ public class Hello {
   }
 
   public static String GroupTotals(String[] strArr) {
-    String[] arr;
-    slots = new String[10];
-    count = 0;
+    Arrays.sort(strArr);
 
+    String[] slots = new String[10];
+    int count = 0;
+    boolean alreadyThere = false;
     for (int i = 0; i < strArr.length; i++) {
-      slots[count] = new StringBuilder(strArr[i]).substring(0, 1);
-      for (int x = 0; x < slots.length; x++) {
-        System.out.println(new StringBuilder(slots[x]).substring(0, 1));
+      if (count < 1) {
+        slots[count] = strArr[i];
+      } else {
+        for (int x = 0; x < slots.length; x++) {
+          if (slots[x] != null) {
+            StringBuilder strArrSb = new StringBuilder(strArr[i]);
+            StringBuilder slotSb = new StringBuilder(slots[x]);
+            if (strArrSb.substring(0, 1).equals(slotSb.substring(0, 1))) {
+              alreadyThere = true;
+              slots[x] = slotSb.substring(0, 1) + ":"
+                  + (Integer.parseInt(slotSb.substring(2)) + Integer.parseInt(strArrSb.substring(2)));
+            }
+          }
+        }
+        if (alreadyThere != true) {
+          slots[count] = strArr[i];
+        }
       }
+      alreadyThere = false;
       count++;
     }
-    System.out.println(slots[0]);
-    return strArr[0];
+
+    for (int d = 0; d < slots.length; d++) {
+      if (slots[d] != null && new StringBuilder(slots[d]).substring(2).equals("0"))
+        slots[d] = null;
+    }
+
+    // Creates the final string output.
+    String res = "";
+    for (String slot : slots) {
+      if (slot != null)
+        res += "," + slot;
+    }
+
+    return new StringBuilder(res).substring(1);
   }
 
   public static void main(String[] args) {
