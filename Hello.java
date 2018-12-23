@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Map;
 import java.util.Collections;
 import java.lang.Math;
 import java.text.DecimalFormat;
@@ -195,7 +196,7 @@ public class Hello {
     }
   }
 
-  public static String GroupTotals(String[] strArr) {
+  public static String GroupTotalsMine(String[] strArr) {
     Arrays.sort(strArr);
 
     String[] slots = new String[10];
@@ -237,6 +238,20 @@ public class Hello {
     }
 
     return new StringBuilder(res).substring(1);
+  }
+
+  public static String GroupTotals(String[] strArr) {
+    StringBuilder res = new StringBuilder();
+    Map<String, Integer> counts = new TreeMap<>();
+    for (String keyValue : strArr) {
+      String[] split = keyValue.split(":");
+      String key = split[0];
+      Integer value = Integer.parseInt(split[1]);
+
+      System.out.println(counts.get(key));
+
+    }
+    return strArr[0];
   }
 
   public static void main(String[] args) {
