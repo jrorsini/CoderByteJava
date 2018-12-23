@@ -250,10 +250,8 @@ public class Hello {
       Integer value = Integer.parseInt(split[1]);
       Integer sum = (counts.get(key) == null ? value : counts.get(key) + value);
       counts.put(key, sum);
-
-      System.out.println(counts.get(key));
-
     }
+    System.out.println(counts);
     return strArr[0];
   }
 
