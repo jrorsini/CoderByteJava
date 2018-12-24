@@ -5,6 +5,8 @@ import java.util.TreeMap;
 import java.util.Collections;
 import java.lang.Math;
 import java.text.DecimalFormat;
+import java.util.*;
+import java.io.*;
 
 public class Hello {
 
@@ -252,18 +254,63 @@ public class Hello {
       counts.put(key, sum);
     }
     System.out.println(counts);
-    return res;
+    // return res;
+    return strArr[0];
+  }
+
+  public static String OffLineMinimumMine(String[] strArr) {
+    int smallest = 1000;
+    int iteration = 0;
+    String[] responseArr = new String[10];
+    StringBuilder res = new StringBuilder();
+
+    for (int i = 0; i < strArr.length; i++) {
+      if (strArr[i].equals("E")) {
+        for (int c = 0; c < i; c++) {
+          if (strArr[c].equals("E") == false && smallest > Integer.parseInt(strArr[c])) {
+            smallest = Integer.parseInt(strArr[c]);
+          }
+        }
+        if (smallest != 1000) {
+          responseArr[iteration] = String.valueOf(smallest);
+          for (int h = 0; h < i; h++) {
+            if (strArr[h].equals("E") == false && smallest == Integer.parseInt(strArr[h])) {
+              strArr[h] = "E";
+            }
+          }
+          smallest = 1000;
+        }
+        iteration++;
+      }
+    }
+
+    for (int d = 0; d < responseArr.length; d++) {
+      if (responseArr[d] != null) {
+        res.append("," + responseArr[d]);
+      }
+    }
+
+    return res.substring(1);
   }
 
   public static String OffLineMinimum(String[] strArr) {
-    for (int i = 0; i < strArr.length; i++) {
-
+    StringBuilder result = new StringBuilder();
+    Set<Integer> intSet = new TreeSet<>();
+    for (String numStr : strArr) {
+      System.out.println(intSet.size());
+      if (numStr.equals("E") && intSet.size() > 0) {
+        List<Integer> tempList = new ArrayList<>(intSet);
+        intSet.remove(tempList.get(0));
+        result.append(tempList.get(0)).append(",");
+      } else {
+        intSet.add(Integer.parseInt(numStr));
+      }
     }
-    return strArr[0];
-
+    return result.substring(0, result.length() - 1);
   }
 
   public static void main(String[] args) {
-    OffLineMinimum(new String[] { "1", "2", "E", "E", "3" });
+    System.out.println(OffLineMinimum(new String[] { "4", "E", "1", "E", "2", "E", "3", "E" }));
+    // System.out.println(OffLineMinimum(new String[] { "1", "2", "E", "E", "3" }));
   }
 }
