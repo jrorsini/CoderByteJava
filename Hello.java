@@ -255,11 +255,15 @@ public class Hello {
     return res;
   }
 
+  public static String OffLineMinimum(String[] strArr) {
+    for (int i = 0; i < strArr.length; i++) {
+
+    }
+    return strArr[0];
+
+  }
+
   public static void main(String[] args) {
-    GroupTotals(new String[] { "Z:0", "A:-1" });
-    // System.out.println(GroupTotals(new String[] { "B:-1", "A:1", "B:3", "A:5"
-    // }));
-    // System.out.println(GroupTotals(new String[] { "X:-1", "Y:1", "X:-4", "B:3",
-    // "X:5" }));
+    OffLineMinimum(new String[] { "1", "2", "E", "E", "3" });
   }
 }
