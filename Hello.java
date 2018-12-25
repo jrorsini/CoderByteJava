@@ -310,6 +310,7 @@ public class Hello {
   }
 
   public static int ChangingSequence(int[] arr) {
+    System.out.println(Integer.MIN_VALUE);
     int index = -1;
     for (int i = 0; i < arr.length; i++) {
       if (arr[0] > arr[1]) {
