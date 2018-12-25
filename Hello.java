@@ -309,8 +309,25 @@ public class Hello {
     return result.substring(0, result.length() - 1);
   }
 
+  public static int ChangingSequence(int[] arr) {
+    int index = 0;
+    for (int i = 0; i < max; i++) {
+      if (arr[0] > arr[1]) {
+        if (arr[i] < arr[i + 1]) {
+          index = i;
+          break;
+        }
+      } else {
+        if (arr[i] > arr[i + 1]) {
+          index = i;
+          break;
+        }
+      }
+    }
+    return index;
+  }
+
   public static void main(String[] args) {
-    System.out.println(OffLineMinimum(new String[] { "4", "E", "1", "E", "2", "E", "3", "E" }));
-    // System.out.println(OffLineMinimum(new String[] { "1", "2", "E", "E", "3" }));
+    System.out.println(ChanginSequence(new int[] { 5, 4, 3, 2, 10, 11 }));
   }
 }
