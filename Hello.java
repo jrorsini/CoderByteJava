@@ -310,15 +310,15 @@ public class Hello {
   }
 
   public static int ChangingSequence(int[] arr) {
-    int index = 0;
-    for (int i = 0; i < max; i++) {
+    int index = -1;
+    for (int i = 0; i < arr.length; i++) {
       if (arr[0] > arr[1]) {
-        if (arr[i] < arr[i + 1]) {
+        if (i < arr.length - 1 && arr[i] < arr[i + 1]) {
           index = i;
           break;
         }
       } else {
-        if (arr[i] > arr[i + 1]) {
+        if (i < arr.length - 1 && arr[i] > arr[i + 1]) {
           index = i;
           break;
         }
@@ -328,6 +328,7 @@ public class Hello {
   }
 
   public static void main(String[] args) {
-    System.out.println(ChanginSequence(new int[] { 5, 4, 3, 2, 10, 11 }));
+    System.out.println(ChangingSequence(new int[] { -4, -2, 9, 10 }));
+    System.out.println(ChangingSequence(new int[] { 5, 4, 3, 2, 10, 11 }));
   }
 }
