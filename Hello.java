@@ -328,8 +328,18 @@ public class Hello {
     return index;
   }
 
+  public static String OverlappingRanges(int[] arr) {
+    int overlapping = 0;
+    for (int i = arr[0]; i <= arr[1]; i++) {
+      for (int d = arr[2]; d <= arr[3]; d++) {
+        if (i == d)
+          overlapping++;
+      }
+    }
+    return String.valueOf(arr[4] == overlapping);
+  }
+
   public static void main(String[] args) {
-    System.out.println(ChangingSequence(new int[] { -4, -2, 9, 10 }));
-    System.out.println(ChangingSequence(new int[] { 5, 4, 3, 2, 10, 11 }));
+    System.out.println(OverlappingRanges(new int[] { 5, 11, 1, 5, 1 }));
   }
 }
