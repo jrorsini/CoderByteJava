@@ -339,7 +339,12 @@ public class Hello {
     return String.valueOf(arr[4] == overlapping);
   }
 
+  public static int Superincreasing(int[] arr) { 
+    return arr[0];
+  } 
+
   public static void main(String[] args) {
-    System.out.println(OverlappingRanges(new int[] { 5, 11, 1, 5, 1 }));
+    System.out.println(Superincreasing(new int[] { 1,2,5,10 }));
+
   }
 }
