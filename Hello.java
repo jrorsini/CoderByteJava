@@ -339,12 +339,34 @@ public class Hello {
     return String.valueOf(arr[4] == overlapping);
   }
 
-  public static int Superincreasing(int[] arr) { 
-    return arr[0];
-  } 
+  public static String Superincreasing(int[] arr) {
+    int sum = 0;
+    for (int i = 0; i < arr.length; i++) {
+      if (arr[i] <= sum) {
+        return "false";
+      }
+      sum += arr[i];
+    }
+    return "true";
+  }
+
+  public static String HammingDistance(String[] strArr) {
+
+    // code goes here
+    /*
+     * Note: In Java the return type of a function and the parameter types being
+     * passed are defined, so this return call must match the return type of the
+     * function. You are free to modify the return type.
+     */
+
+    return strArr[0];
+
+  }
 
   public static void main(String[] args) {
-    System.out.println(Superincreasing(new int[] { 1,2,5,10 }));
+    System.out.println(HammingDistance(new String[] { "10011", "10100" }));
+    System.out.println(HammingDistance(new String[] { "helloworld", "worldhello"
 
+    }));
   }
 }
