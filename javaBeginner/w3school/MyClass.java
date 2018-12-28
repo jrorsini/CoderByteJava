@@ -3,7 +3,7 @@
  */
 public class MyClass {
   int x = 5;
-  int y = 3;
+  final int y = 3;
 
   public static void main(String[] args) {
     MyClass myObj1 = new MyClass();
