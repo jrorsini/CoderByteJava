@@ -363,7 +363,7 @@ public class Hello {
   public static String RectangleArea(String[] strArr) {
     int length;
     int width;
-    System.out.println(strArr[0].split(" "));
+    System.out.println(new StringBuilder(strArr[0].split(" ")[0]));
 
     return strArr[0];
   }
