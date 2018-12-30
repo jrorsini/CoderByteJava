@@ -369,14 +369,15 @@ public class Hello {
       if (i > 1) {
         width += Math.abs(Integer.parseInt(String.valueOf(x.replace(0, 1, "")))
             - Integer.parseInt(String.valueOf(y.replace(y.length() - 1, y.length(), ""))));
-        System.out.println(width);
       } else {
 
         length += Math.abs(Integer.parseInt(String.valueOf(x.replace(0, 1, "")))
             - Integer.parseInt(String.valueOf(y.replace(y.length() - 1, y.length(), ""))));
-        System.out.println(length);
       }
     }
+    System.out.println(width);
+
+    System.out.println(length);
 
     return strArr[0];
   }
