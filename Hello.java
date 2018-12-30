@@ -360,10 +360,15 @@ public class Hello {
     return ham;
   }
 
-  public static void main(String[] args) {
-    System.out.println(HammingDistance(new String[] { "10011", "10100" }));
-    System.out.println(HammingDistance(new String[] { "helloworld", "worldhello"
+  public static String RectangleArea(String[] strArr) {
+    int length;
+    int width;
+    System.out.println(strArr[0].split(" "));
 
-    }));
+    return strArr[0];
+  }
+
+  public static void main(String[] args) {
+    System.out.println(RectangleArea(new String[] { "(1 1)", "(1 3)", "(3 1)", "(3 3)" }));
   }
 }
