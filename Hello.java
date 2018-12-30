@@ -361,17 +361,20 @@ public class Hello {
   }
 
   public static String RectangleArea(String[] strArr) {
-    int length;
-    int width;
+    int length = 0;
+    int width = 0;
     for (int i = 0; i < strArr.length; i++) {
       StringBuilder x = new StringBuilder(strArr[i].split(" ")[0]);
       StringBuilder y = new StringBuilder(strArr[i].split(" ")[1]);
       if (i > 1) {
-        System.out.println(Integer.parseInt(String.valueOf(x.replace(0, 1, ""))));
-        System.out.println(Integer.parseInt(String.valueOf(y.replace(y.length() - 1, y.length(), ""))));
+        width += Math.abs(Integer.parseInt(String.valueOf(x.replace(0, 1, "")))
+            - Integer.parseInt(String.valueOf(y.replace(y.length() - 1, y.length(), ""))));
+        System.out.println(width);
       } else {
-        System.out.println(Integer.parseInt(String.valueOf(x.replace(0, 1, ""))));
-        System.out.println(Integer.parseInt(String.valueOf(y.replace(y.length() - 1, y.length(), ""))));
+
+        length += Math.abs(Integer.parseInt(String.valueOf(x.replace(0, 1, "")))
+            - Integer.parseInt(String.valueOf(y.replace(y.length() - 1, y.length(), ""))));
+        System.out.println(length);
       }
     }
 
