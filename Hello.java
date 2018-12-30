@@ -360,7 +360,7 @@ public class Hello {
     return ham;
   }
 
-  public static String RectangleArea(String[] strArr) {
+  public static int RectangleArea(String[] strArr) {
     int length = 0;
     int width = 0;
     for (int i = 0; i < strArr.length; i++) {
@@ -370,15 +370,12 @@ public class Hello {
         width += Math.abs(Integer.parseInt(String.valueOf(x.replace(0, 1, "")))
             - Integer.parseInt(String.valueOf(y.replace(y.length() - 1, y.length(), ""))));
       } else {
-
         length += Math.abs(Integer.parseInt(String.valueOf(x.replace(0, 1, "")))
             - Integer.parseInt(String.valueOf(y.replace(y.length() - 1, y.length(), ""))));
       }
     }
-    System.out.println(width);
-    System.out.println(length);
 
-    return strArr[0];
+    return width * length;
   }
 
   public static void main(String[] args) {
