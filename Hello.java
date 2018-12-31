@@ -384,12 +384,12 @@ public class Hello {
       res += (String.valueOf(strArr[0].charAt(i)).equals("1") || String.valueOf(strArr[1].charAt(i)).equals("1")) ? "1"
           : "0";
     }
-    return strArr[0];
+    return res;
 
   }
 
   public static void main(String[] args) {
     System.out.println(BitwiseOne(new String[] { "100", "000" }));
-    // System.out.println(BitwiseOne(new String[] { "00011", "01010" }));
+    System.out.println(BitwiseOne(new String[] { "00011", "01010" }));
   }
 }
