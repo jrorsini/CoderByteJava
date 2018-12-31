@@ -385,7 +385,6 @@ public class Hello {
           : "0";
     }
     return res;
-
   }
 
   public static void main(String[] args) {
