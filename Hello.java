@@ -378,10 +378,21 @@ public class Hello {
     return width * length;
   }
 
+  public static String BitwiseOne(String[] strArr) {
+
+    // code goes here
+    /*
+     * Note: In Java the return type of a function and the parameter types being
+     * passed are defined, so this return call must match the return type of the
+     * function. You are free to modify the return type.
+     */
+
+    return strArr[0];
+
+  }
+
   public static void main(String[] args) {
-    // System.out.println(RectangleArea(new String[] { "(1 1)", "(1 3)", "(3 1)",
-    // "(3 3)" }));
-    // System.out.println(RectangleArea(new String[] { "(0 0)", "(1 0)", "(1 1)",
-    // "(0 1)" }));
+    System.out.println(BitwiseOne(new String[] { "100", "000" }));
+    System.out.println(BitwiseOne(new String[] { "00011", "01010" }));
   }
 }
