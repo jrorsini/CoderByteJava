@@ -379,20 +379,17 @@ public class Hello {
   }
 
   public static String BitwiseOne(String[] strArr) {
-
-    // code goes here
-    /*
-     * Note: In Java the return type of a function and the parameter types being
-     * passed are defined, so this return call must match the return type of the
-     * function. You are free to modify the return type.
-     */
-
+    String res = "";
+    for (int i = 0; i < strArr[0].length(); i++) {
+      res += (String.valueOf(strArr[0].charAt(i)).equals("1") || String.valueOf(strArr[1].charAt(i)).equals("1")) ? "1"
+          : "0";
+    }
     return strArr[0];
 
   }
 
   public static void main(String[] args) {
     System.out.println(BitwiseOne(new String[] { "100", "000" }));
-    System.out.println(BitwiseOne(new String[] { "00011", "01010" }));
+    // System.out.println(BitwiseOne(new String[] { "00011", "01010" }));
   }
 }
