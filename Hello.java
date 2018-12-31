@@ -387,8 +387,12 @@ public class Hello {
     return res;
   }
 
+  public static String OtherProducts(int[] arr) {
+    return "MeatLoaf";
+  }
+
   public static void main(String[] args) {
-    System.out.println(BitwiseOne(new String[] { "100", "000" }));
-    System.out.println(BitwiseOne(new String[] { "00011", "01010" }));
+    System.out.println(OtherProducts(new int[] { 1, 2, 3, 100 }));
+    System.out.println(OtherProducts(new int[] { 1, 2, 3, 100 }));
   }
 }
