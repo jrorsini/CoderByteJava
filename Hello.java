@@ -406,11 +406,12 @@ public class Hello {
     for (int i = 0; i < arr.length; i++) {
       System.out.println(arr[i]);
       if (treemap.size() != 0) {
-
+        for (int h = 0; h < arr[i].length(); h++) {
+          System.out.println(treemap.get(arr[i].charAt(h)));
+        }
       } else {
         treemap.put(arr[i], 1);
       }
-
     }
     System.out.println(treemap.size());
     return str;
