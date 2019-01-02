@@ -405,6 +405,11 @@ public class Hello {
     NavigableMap<String, Integer> treemap = new TreeMap<String, Integer>();
     for (int i = 0; i < arr.length; i++) {
       System.out.println(arr[i]);
+      if (treemap.size() != 0) {
+
+      } else {
+        treemap.put(arr[i], 1);
+      }
 
     }
     System.out.println(treemap.size());
