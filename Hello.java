@@ -404,10 +404,9 @@ public class Hello {
     String[] arr = str.split(" ");
     NavigableMap<String, Integer> treemap = new TreeMap<String, Integer>();
     for (int i = 0; i < arr.length; i++) {
-      System.out.println(arr[i]);
       if (treemap.size() != 0) {
         for (int h = 0; h < arr[i].length(); h++) {
-          System.out.println(treemap.get(arr[i].charAt(h)));
+          System.out.println(treemap.get(String.valueOf(arr[i].charAt(h))));
         }
       } else {
         treemap.put(arr[i], 1);
