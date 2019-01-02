@@ -400,9 +400,18 @@ public class Hello {
     return res.substring(1);
   }
 
+  public static String LetterCountI(String str) {
+    String[] arr = str.split("");
+    for (int i = 0; i < arr.length; i++) {
+      System.out.println(arr[i]);
+    }
+    return str;
+  }
+
   public static void main(String[] args) {
     System.out.println(OtherProducts(new int[] { 1, 2, 3, 4, 5 }));
     System.out.println(OtherProducts(new int[] { 1, 4, 3 }));
     System.out.println(OtherProducts(new int[] { 3, 1, 2, 6 }));
+    System.out.println(LetterCountI("Hello apple pie"));
   }
 }
