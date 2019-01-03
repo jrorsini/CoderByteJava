@@ -416,7 +416,13 @@ public class Hello {
     return str;
   }
 
+  public static int MeanMode(int[] arr) {
+
+    return arr[0];
+
+  }
+
   public static void main(String[] args) {
-    System.out.println(LetterCountI("Hello apple pie"));
+    System.out.println(MeanMode(new int[] { 1, 2, 3, 100 }));
   }
 }
