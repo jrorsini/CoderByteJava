@@ -417,12 +417,29 @@ public class Hello {
   }
 
   public static int MeanMode(int[] arr) {
-
-    return arr[0];
-
+    int mean = 0;
+    int biggest = 0;
+    int mode = 0;
+    NavigableMap<Integer, Integer> modeTree = new TreeMap<Integer, Integer>();
+    for (int i = 0; i < arr.length; i++) {
+      if (modeTree.get(arr[i]) == null) {
+        modeTree.put(arr[i], 1);
+        biggest = 1;
+      } else {
+        modeTree.put(arr[i], modeTree.get(arr[i]) + 1);
+        if (modeTree.get(arr[i]) + 1 > biggest) {
+          mode = arr[i];
+        }
+      }
+      mean += arr[i];
+    }
+    mean /= arr.length;
+    return mean == mode ? 1 : 0;
   }
 
   public static void main(String[] args) {
-    System.out.println(MeanMode(new int[] { 1, 2, 3, 100 }));
+    System.out.println(MeanMode(new int[] { 5, 3, 3, 3, 1 }));
+    System.out.println(MeanMode(new int[] { 4, 4, 4, 6, 2 }));
+
   }
 }
