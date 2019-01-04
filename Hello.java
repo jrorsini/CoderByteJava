@@ -438,14 +438,16 @@ public class Hello {
   }
 
   public static String NumberStream(String str) {
+    for (int i = 0; i < str.length(); i++) {
+
+    }
 
     return str;
 
   }
 
   public static void main(String[] args) {
-    System.out.println(MeanMode(new int[] { 5, 3, 3, 3, 1 }));
-    System.out.println(MeanMode(new int[] { 4, 4, 4, 6, 2 }));
+    System.out.println(NumberStream("5556293383563665"));
 
   }
 }
