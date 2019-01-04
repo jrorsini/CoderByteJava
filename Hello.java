@@ -437,6 +437,12 @@ public class Hello {
     return mean == mode ? 1 : 0;
   }
 
+  public static String NumberStream(String str) {
+
+    return str;
+
+  }
+
   public static void main(String[] args) {
     System.out.println(MeanMode(new int[] { 5, 3, 3, 3, 1 }));
     System.out.println(MeanMode(new int[] { 4, 4, 4, 6, 2 }));
