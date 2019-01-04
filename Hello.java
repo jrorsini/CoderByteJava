@@ -438,16 +438,25 @@ public class Hello {
   }
 
   public static String NumberStream(String str) {
-    for (int i = 0; i < str.length(); i++) {
-
+    int n = 0;
+    for (int i = 1; i < str.length(); i++) {
+      if (str.charAt(i) == str.charAt(i - 1)) {
+        n++;
+        if (Integer.parseInt(String.valueOf(str.charAt(i - 1))) == n) {
+          return "true";
+        }
+      } else {
+        n = 0;
+      }
     }
-
-    return str;
+    return "false";
 
   }
 
   public static void main(String[] args) {
+    System.out.println(NumberStream("5788888888882339999"));
     System.out.println(NumberStream("5556293383563665"));
+    System.out.println(NumberStream("6539923335"));
 
   }
 }
